@@ -72,7 +72,7 @@ const AddVechele = () => {
     }
 
     try {
-      const response = await axios.post('https://vms-backend.up.railway.app/api/v1/addvechele', formData, {
+      const response = await axios.post('https://vm-backend.up.railway.app/api/v1/addvechele', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
