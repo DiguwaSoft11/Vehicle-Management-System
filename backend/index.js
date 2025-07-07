@@ -24,8 +24,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: [
-      "http://localhost:5000/",
-      "http://localhost:80/",
+      "https://vms-backend.up.railway.app/",
+      "https://vms.up.railway.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -38,8 +38,8 @@ const io = new Server(server, {
 app.use((req, res, next) => {
   const allowedOrigins = [
       "http://localhost",
-      "http://localhost:5000/",
-      "http://localhost:80/",
+      "https://vms-backend.up.railway.app/",
+      "https://vms.up.railway.app",
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
